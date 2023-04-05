@@ -1,0 +1,49 @@
+/*      header      */
+header {
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 10px 10px;
+}
+
+.current_user {
+    display: flex;
+}
+
+li a {
+}
+
+.nav {
+}
+
+/*****     main     ********/
+
+
+main {
+    margin: 0 auto;
+}
+
+.user_card {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+}
+
+a, button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+form button {
+    margin: 0;
+    border: none;
+    padding: 0;
+    outline: none;
+}
