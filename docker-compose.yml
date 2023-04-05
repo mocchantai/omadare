@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: ./infra/docker/development/nginx/Dockerfile
     ports:
-      - 58080:80
+      - 80:80
     volumes:
       - php-fpm-socket:/var/run/php-fpm
       - ./laravel:/work/laravel
