@@ -17,6 +17,7 @@ services:
       dockerfile: ./infra/docker/development/nginx/Dockerfile
     ports:
       - 80:80
+      - 443:443
     volumes:
       - php-fpm-socket:/var/run/php-fpm
       - ./laravel:/work/laravel
