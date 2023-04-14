@@ -1,104 +1,204 @@
-body {
-    margin: 0;
-    height: 100vh;
-    width: 100%;
+/*!*------------------------desktop----------------------------*!*/
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*body {*/
+/*    margin: 0;*/
+/*}*/
+
+/*!*header*!*/
+/*.header {*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.logo {*/
+/*    margin: 12px 24px;*/
+/*}*/
+
+/*.logo__image {*/
+/*    width: 174px;*/
+/*    height: 72px;*/
+
+/*}*/
+/*.nav {*/
+/*}*/
+
+/*.gnav {*/
+/*    margin-right: 24px;*/
+/*}*/
+
+/*.gnav__login {*/
+/*    display: inline-block;*/
+/*    color: #000000;*/
+/*    text-decoration: none;*/
+/*    padding: 10px 30px;*/
+/*    background-color: #AEAEAE;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*.gnav__sign-in {*/
+/*    display: inline-block;*/
+/*    margin-left: 20px;*/
+/*    color: #000000;*/
+/*    text-decoration: none;*/
+/*    padding: 10px 30px;*/
+/*    background-color: #76B5FF;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*.gnav__login:hover {*/
+/*    display: inline-block;*/
+/*    color: #000000;*/
+/*    text-decoration: none;*/
+/*    padding: 10px 30px;*/
+/*    background-color: #898989;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*.gnav__sign-in:hover {*/
+/*    display: inline-block;*/
+/*    margin-left: 20px;*/
+/*    color: #000000;*/
+/*    text-decoration: none;*/
+/*    padding: 10px 30px;*/
+/*    background-color: #B7D8FF;*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*!*main*!*/
+/*.main {*/
+/*    position: relative;*/
+/*    bottom: 0;*/
+
+/*}*/
+
+/*.main__cover-image {*/
+/*    width: 100%;*/
+/*}*/
+
+/*.main__catch-copy {*/
+/*    font-size: 50px;*/
+/*    position: absolute;*/
+/*    top: 40%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+
+
+/*---------------------------------------------レスポンシブ-------------------------------------------------*/
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
 }
+@media screen and (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.header-inner {
-    position: relative;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: #F5F5F5;
+        /*background: linear-gradient(to bottom, orange 0%, coral 100%);*/
+    }
 
-.wrap {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
+    /*header*/
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
+    .logo {
+        width: 100%;
+    }
 
+    .logo__image {
+        width: 174px;
+        height: 72px;
+        margin: 12px auto;
 
+    }
+    .nav {
+    }
 
-.gnav-list {
-    display: flex;
-}
+    .gnav {
+        /*margin-right: 24px;*/
+        display: flex;
+        justify-content: center;
+    }
 
+    .gnav__login {
+        display: inline-block;
+        color: #000000;
+        text-decoration: none;
+        padding: 10px 30px;
+        width: 405px;
+        height: 120px;
+        background-color: #F5F5F5;
+        box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25), -8px -8px 0px rgba(255, 255, 255, 0.8);
+        border-radius: 94px;
+        text-align: center;
+    }
 
+    .gnav__sign-in {
+        display: inline-block;
+        margin-left: 20px;
+        color: #000000;
+        text-decoration: none;
+        padding: 10px 30px;
+        background-color: #F5F5F5;
+        box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25), -8px -8px 12px rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+    }
 
-a {
-    color: #000;
-    font-weight: bold;
-}
+    /*.gnav__login:hover {*/
+    /*    display: inline-block;*/
+    /*    color: #000000;*/
+    /*    text-decoration: none;*/
+    /*    padding: 10px 30px;*/
+    /*    background-color: #898989;*/
+    /*    border-radius: 8px;*/
+    /*}*/
 
+    /*.gnav__sign-in:hover {*/
+    /*    display: inline-block;*/
+    /*    margin-left: 20px;*/
+    /*    color: #000000;*/
+    /*    text-decoration: none;*/
+    /*    padding: 10px 30px;*/
+    /*    background-color: #B7D8FF;*/
+    /*    border-radius: 8px;*/
+    /*}*/
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 20px;
-    background-color: #007bff;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
+    /*main*/
+    .main {
+        /*position: relative;*/
+        /*bottom: 0;*/
 
-}
+    }
 
-#login-button {
-    background-color: #AEAEAE;
-    padding: 10px 30px;
-    transition: background-color 200ms ease-out;
+    .main__cover-image {
+        /*width: 100%;*/
+        display: none;
+    }
 
-}
-
-#login-button:hover {
-    background-color: #898989;
-    color: #000;
-    text-decoration: none;
-
-}
-
-#register-button {
-    background-color: #76B5FF;
-    padding: 10px 30px;
-    transition: background-color 200ms ease-out;
-}
-#register-button:hover {
-    background-color: #B7D8FF;
-    color: #000;
-    text-decoration: none;
-
-}
-
-
-
-
-
-
-.hero {
-    position: relative;
-    height: 100%;
-}
-
-.hero img {
-    /*反応してないけど、widthにしたら問題なかった*/
-    /*width: 100%;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    top: 0;
-    left: 0;
-    /*width: 100%;*/
-    height: 100vh;
-    object-fit: cover;
-}
-
-.hero .catch-copy {
-    position: absolute;
-    font-size: 80px;
-    width: 1000px;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
+    .main__catch-copy {
+        display: none;
+        /*font-size: 50px;*/
+        /*position: absolute;*/
+        /*top: 40%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
+    }
 }
