@@ -1,65 +1,172 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/post_index_style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="post_index_style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #F59084;
+        }
+
+
+        /* ------------------------header section-------------------------- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header__logo img {
+            width: 60px;
+            height: 60px;
+            margin-left: 16px;
+            margin-top: 12px;
+        }
+
+        .header__nav i {
+            font-size: 24px;
+            color: #ffffff;
+            margin-right: 16px;
+        }
+
+        /* --------------------main section---------------------- */
+        .main {
+            margin: 32px 16px;
+        }
+
+
+        /* ---switch--- */
+        .switch {
+            margin: 0 auto;
+            margin-bottom: 32px;
+            width: 280px;
+            height: 60px;
+            background-color: #ffffff;
+            display: flex;
+            border-radius: 100px;
+            position: relative;
+        }
+
+        .switch__button--left a {
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            width: 140px;
+            height: 56px;
+            border-radius: 100px;
+            background-color: #F59084;
+            position: absolute; /* switchに対して、相対位置にする */
+            top: 2px;
+            left: 2px;
+            display: inline-block; /* inline-blockにする */
+            text-align: center; /* 横方向中央ぞろえにする */
+            line-height: 56px; /* 縦方向中央ぞろえにする */
+            vertical-align: middle; /* 縦方向中央ぞろえにする */
+        }
+
+        .switch__button--right a {
+            text-align: center;
+            color: #909090;
+            text-decoration: none;
+            width: 140px;
+            height: 56px;
+            border-radius: 100px;
+            position: absolute; /* switchに対して、相対位置にする */
+            top: 2px;
+            right: 2px;
+            display: inline-block; /* inline-blockにする */
+            text-align: center; /* 横方向中央ぞろえにする */
+            line-height: 56px; /* 縦方向中央ぞろえにする */
+            vertical-align: middle; /* 縦方向中央ぞろえにする */
+        }
+
+
+        /* ---list section--- */
+        .name-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name-card {
+            width: 358px;
+            height: 100px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            opacity: 0.6;
+            margin-bottom: 4px;
+        }
+
+        .name-card:hover {
+            width: 358px;
+            height: 100px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+
+        .name-card__name {
+            padding: 4px 8px;
+            font-size: 18px;
+        }
+
+        .name-card__memo {
+            padding: 0 8px;
+            font-size: 12px;
+        }
+    </style>
+    <title>OmadareUI</title>
 </head>
 <body>
-    <header class="header wrap">
-        <div class="header-inner">
-            <a href="{{ route('post.index') }}"><img src="/img/main_logo.jpg" alt="おまだれ？" width="174" height="72" class="main-logo"></a>
-            <nav class="gnav">
-                <ul class="gnav-list">
-                    <a href="{{ route('post.create') }} " id="login-button" class="button">
-                        <i class="bi bi-person-plus nav-icon"></i>
-                        <span>名前を追加</span>
-                    </a>
-                    <a href="{{ route('logout') }}" id="register-button" class="button">
-                        <i class="bi bi-emoji-sunglasses nav-icon"></i>
-                        <span>ログアウト</span>
-                    </a>
-                </ul>
-            </nav>
+<header class="header">
+    <div class="header__logo">
+        <img src="img/logo.png" alt="おまだれ？">
+    </div>
+    <div class="header__nav">
+        <a href="{{ route('post.index') }}"><i class="bi bi-list"></i></a>
+    </div>
+</header>
+<main class="main">
+    <!-- switch section -->
+    <div class="switch">
+        <div class="switch__button--left">
+            <a href="{{ route('post.index') }}">一覧</a>
         </div>
-        <hr>
-    </header>
-
-
-    <div class="table-container">
-        <table class="table table-hover .table-sm">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">日時</th>
-            <th scope="col">名前</th>
-            <th scope="col">メモ</th>
-        </tr>
-        </thead>
-        <tbody>
+        <div class="switch__button--right">
+            <a href="{{ route('post.create') }}">作成</a>
+        </div>
+    </div>
+    <!-- list section -->
+    <div class="name-list">
         @foreach($posts as $post)
             @if( $post->user_id == Auth::user()->id )
-{{--                テーブルの行をクリックすると、postの編集画面に飛ばしたい。--}}
-{{--                ここやばいな、routeでpost.editに行くときは、idをセットで持って行かないといけない。--}}
-                    <tr onclick="window.location.href='{{ route('post.edit', ['id' => $post->id] ) }}'">
-{{--                    <tr>--}}
-                        <th scope="row">{{  $post->user_id }}</th>
-                        <td>{{  $post->created_at  }}</td>
-                        <td>{{  $post->friend_name  }}</td>
-                        <td>{{  $post->memo  }}</td>
-                    </tr>
-
+                <div class="name-card" onclick="window.location.href='{{ route('post.edit', ['id' => $post->id] ) }}'">
+                    <div class="name-card__name">
+                        <p>{{  $post->friend_name  }}</p>
+                    </div>
+                    <div class="name-card__memo">
+                        <p>{{  $post->memo  }}</p>
+                    </div>
+                </div>
             @endif
         @endforeach
-        </tbody>
-    </table>
     </div>
-
-
+</main>
 </body>
 </html>

@@ -1,91 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    background-color: #EDEDED;
+    height: 100vh;
+    background-color: #F59084;
 }
 
 
-.header-inner {
-    /*position: relative;*/
-    padding: 20px 100px 10px 100px;
+/* ------------------------header section-------------------------- */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-.gnav-list {
-    display: flex;
-}
-
-
-a {
-    color: #000;
-    font-weight: bold;
-}
-
-
-/*-----------------アイコンと文字の間にスペースが適用できない-------------------*/
-/*理由がわからん*/
-/*.button i {*/
-/*    margin-right: 20px !important;*/
-/*}*/
-
-/*.button span {*/
-/*    margin-left: 10px !important;*/
-/*}*/
-/*----------------ここまで--------------------*/
-
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 20px;
-    background-color: #007bff;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-
-
-}
-
-#login-button {
-    background-color: #AEAEAE;
-    transition: background-color 200ms ease-out;
-
-}
-
-#login-button:hover {
-    background-color: #898989;
-    color: #000;
-    text-decoration: none;
-
-}
-
-#register-button {
-    background-color: #76B5FF;
-    transition: background-color 200ms ease-out;
-}
-
-#register-button:hover {
-    background-color: #B7D8FF;
-    color: #000;
-    text-decoration: none;
-
-}
-
-
-.table-container {
-    width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.table {
-    max-width: 1000px;
-    table-layout: auto;
-    text-align: center;
+.header__logo img {
+    width: 60px;
+    height: 60px;
+    margin-left: 16px;
+    margin-top: 12px;
+}
+
+.header__nav i {
+    font-size: 24px;
+    color: #ffffff;
+    margin-right: 16px;
+}
+
+/* --------------------main section---------------------- */
+.main {
+    margin: 32px 16px;
+}
+
+
+/* ---switch--- */
+.switch {
+    margin: 0 auto;
+    margin-bottom: 32px;
+    width: 280px;
+    height: 60px;
     background-color: #ffffff;
-    margin: 50px auto 0 auto;
+    display: flex;
+    border-radius: 100px;
+    position: relative;
+}
+
+.switch__button--left a {
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    width: 140px;
+    height: 56px;
+    border-radius: 100px;
+    background-color: #F59084;
+    position: absolute; /* switchに対して、相対位置にする */
+    top: 2px;
+    left: 2px;
+    display: inline-block; /* inline-blockにする */
+    text-align: center; /* 横方向中央ぞろえにする */
+    line-height: 56px; /* 縦方向中央ぞろえにする */
+    vertical-align: middle; /* 縦方向中央ぞろえにする */
+}
+
+.switch__button--right a {
+    text-align: center;
+    color: #909090;
+    text-decoration: none;
+    width: 140px;
+    height: 56px;
+    border-radius: 100px;
+    position: absolute; /* switchに対して、相対位置にする */
+    top: 2px;
+    right: 2px;
+    display: inline-block; /* inline-blockにする */
+    text-align: center; /* 横方向中央ぞろえにする */
+    line-height: 56px; /* 縦方向中央ぞろえにする */
+    vertical-align: middle; /* 縦方向中央ぞろえにする */
 }
 
 
+/* ---list section--- */
+.name-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-card {
+    width: 358px;
+    height: 100px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.name-card:hover {
+    width: 358px;
+    height: 100px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+.name-card__name {
+    padding: 4px 8px;
+    font-size: 18px;
+}
+
+.name-card__memo {
+    padding: 0 8px;
+    font-size: 12px;
+}
