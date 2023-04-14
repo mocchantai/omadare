@@ -172,7 +172,7 @@
 
         .form__button i {
             font-size: 28px;
-            margin-right: 5px;
+            margin-right: 16px;
             transform: translateX(-20%);
         }
 
