@@ -260,7 +260,7 @@
 <!-- header section -->
 <header class="header">
     <div class="header__logo">
-        <img src="img/logo.png" alt="おまだれ？">
+        <img src="/img/logo.png" alt="おまだれ？">
     </div>
     <div class="header__nav">
         <a href="{{  route('login')  }}"><i class="bi bi-list"></i></a>
