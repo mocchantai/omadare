@@ -1,147 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     height: 100vh;
-    width: 100%;
+    background-color: #F59084;
 }
 
-.header-inner {
-    position: relative;
-    padding: 20px 100px;
+
+/* ------------------------header section-------------------------- */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.wrap {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    left: 0;
+.header__logo img {
+    width: 60px;
+    height: 60px;
+    margin-left: 16px;
+    margin-top: 12px;
+}
+
+.header__nav i {
+    font-size: 24px;
+    color: #ffffff;
+    margin-right: 16px;
+}
+
+/* --------------------main section---------------------- */
+.main {
+    margin: 48px 16px;
 }
 
 
 
 
-.gnav-list {
+/* ---form--- */
+.form {
+    max-width: 384px;
+    margin: 0 auto;
+}
+
+.form__section-title {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.name, .email, .password {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.name__input {
+    width: 358px;
+    height: 54px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ffffff; /* 下線の太さと色を指定 */
+    outline: none; /*フォーカス時のアウトラインを消す*/
+}
+.name__input::placeholder {
+    color: #ffffff;
+}
+
+.email__input {
+    width: 358px;
+    height: 54px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ffffff; /* 下線の太さと色を指定 */
+    outline: none; /*フォーカス時のアウトラインを消す*/
+}
+.email__input::placeholder {
+    color: #ffffff;
+}
+.password__input {
+    width: 358px;
+    height: 54px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ffffff; /* 下線の太さと色を指定 */
+    outline: none; /*フォーカス時のアウトラインを消す*/
+}
+.password__input::placeholder {
+    color: #ffffff;
 }
 
 
-a {
-    color: #000;
-    font-weight: bold;
-}
-
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 20px;
-    background-color: #007bff;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-
-
-}
-
-#login-button {
-    background-color: #AEAEAE;
-    padding: 10px 30px;
-    transition: background-color 200ms ease-out;
-
-}
-
-#login-button:hover {
-    background-color: #898989;
-    color: #000;
-    text-decoration: none;
-
-}
-
-#register-button {
-    background-color: #76B5FF;
-    padding: 10px 30px;
-    transition: background-color 200ms ease-out;
-}
-#register-button:hover {
-    background-color: #B7D8FF;
-    color: #000;
-    text-decoration: none;
-
-}
-
-
-
-
-
-
-
-.hero {
-    position: relative;
-}
-
-.hero img {
-    width: 100%;
-    height: 100vh;
-}
-
-
-
-
-.hero .form-container {
-    position: absolute;
-    width: 500px;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
+/* -------button--------- */
+.form__button {
+    display: block;
+    width: 280px;
+    height: 64px;
     background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    border-radius: 100px;
+    border: none;
+    color: #F59084;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero .form-inner {
-    width: 500px;
-    padding: 20px 20px;
+.form__button span {
+    font-size: 18px;
 }
 
-
-
-
-.hero h4 {
-    font-size: 16px;
-}
-
-.hero hr {
-    border: 1px solid #ccc;
-}
-
-.hero .input-row {
-    width: 450px;
-}
-
-.hero label {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    text-align: right;
-    margin-right: 10px;
-}
-
-.hero input {
-    display: inline-block;
-    width: 90%;
-}
-
-
-
-.hero .submit-button-container {
-    width: 450px;
-    text-align: center;
-}
-
-
-
-.hero .submit-button {
-    width: 300px;
+.main__link {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    width: fit-content;
+    margin: 16px auto 0 auto;
 }

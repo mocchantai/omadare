@@ -35,7 +35,7 @@ class LoginController extends Controller
         Auth::logout();
 
 //        return redirect()->route('loggedOut');
-        return redirect()->route('prelogin');
+        return redirect()->route('login');
     }
 
     protected function loggedOut()
