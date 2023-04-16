@@ -204,7 +204,7 @@
         </div>
     </div>
     <!-- form section -->
-    <form action="{{  route('post.store')  }}" class="form" method="post">
+    <form action="{{  route('post.update')  }}" class="form" method="post">
         @csrf
         <div class="name">
             <label for="friend_name" class="name__label">
