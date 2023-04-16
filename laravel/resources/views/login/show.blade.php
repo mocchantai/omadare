@@ -203,7 +203,7 @@
         <img src="img/logo.png" alt="おまだれ？">
     </div>
     <div class="header__nav">
-        <a href=""><i class="bi bi-list"></i></a>
+        <a href="{{  route('login')  }}"><i class="bi bi-list"></i></a>
     </div>
 </header>
 <main class="main">
