@@ -20,9 +20,9 @@ use App\Http\Controllers\OnlyLoginController;
 
 
 
-Route::get('/', function () {
-    return view('prelogin');
-})->name('prelogin');
+//Route::get('/', function () {
+//    return view('prelogin');
+//})->name('prelogin');
 
 Route::get('users', [UserController::class, 'index'])->name('user.index');
 Route::get('users/create',[UserController::class,'create'])->name('user.create');
@@ -40,8 +40,8 @@ Route::delete('posts/{id}', [PostController::class,'delete'])->name('post.delete
 
 
 
-Route::get('login', [LoginController::class,'show'])->name('login');
-Route::post('login', [LoginController::class,'login'])->name('login.post');
+Route::get('/', [LoginController::class,'show'])->name('login');
+Route::post('/', [LoginController::class,'login'])->name('login.post');
 Route::get('logout', [LoginController::class,'logout'])->name('logout');
 Route::get('loggedOut', [LoginController::class,'loggedOut'])->name('loggedOut');
 
